@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-09-09T06:42:17.858Z",
+    "end": "2022-09-09T06:42:24.610Z",
+    "duration": 6752,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bfb75f85-9b21-469d-a46e-53d818702bdb",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Selectors.js",
+      "file": "cypress/integration/examples/Selectors.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2cc2135f-d353-4f0d-99cf-9513c54747a9",
+          "title": "Automation test store",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to submit a successful submission via contact us form",
+              "fullTitle": "Automation test store should be able to submit a successful submission via contact us form",
+              "timedOut": null,
+              "duration": 3181,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.automationteststore.com/\");\ncy.get('.info_links_footer > :nth-child(5) > a').click();\ncy.get('#ContactUsFrm_first_name').type(\"Joe\");\ncy.get('#ContactUsFrm_email').type(\"fake@gmail.com\");\ncy.get('#ContactUsFrm_enquiry').type(\"do you provide discounts on new accs?\");\ncy.get('.col-md-6 > .btn').click();",
+              "err": {
+                "message": "CypressError: Cypress detected a cross origin error happened on page load:\n\n  > Blocked a frame with origin \"http://www.automationteststore.com\" from accessing a cross-origin frame.\n\nBefore the page load, you were bound to the origin policy:\n\n  > http://automationteststore.com\n\nA cross origin error happens when your application navigates to a new URL which does not match the origin policy above.\n\nA new URL does not match the origin policy if the 'protocol', 'port' (if specified), and/or 'host' (unless of the same superdomain) are different.\n\nCypress does not allow you to navigate to a different origin URL within a single test.\n\nYou may need to restructure some of your test code to avoid this problem.\n\nAlternatively you can also disable Chrome Web Security in Chromium-based browsers which will turn off this restriction by setting { chromeWebSecurity: false } in `cypress.json`.\n\nhttps://on.cypress.io/cross-origin-violation",
+                "estack": "CypressError: Cypress detected a cross origin error happened on page load:\n\n  > Blocked a frame with origin \"http://www.automationteststore.com\" from accessing a cross-origin frame.\n\nBefore the page load, you were bound to the origin policy:\n\n  > http://automationteststore.com\n\nA cross origin error happens when your application navigates to a new URL which does not match the origin policy above.\n\nA new URL does not match the origin policy if the 'protocol', 'port' (if specified), and/or 'host' (unless of the same superdomain) are different.\n\nCypress does not allow you to navigate to a different origin URL within a single test.\n\nYou may need to restructure some of your test code to avoid this problem.\n\nAlternatively you can also disable Chrome Web Security in Chromium-based browsers which will turn off this restriction by setting { chromeWebSecurity: false } in `cypress.json`.\n\nhttps://on.cypress.io/cross-origin-violation\n    at cypressErr (http://www.automationteststore.com/__cypress/runner/cypress_runner.js:146621:16)\n    at cypressErrByPath (http://www.automationteststore.com/__cypress/runner/cypress_runner.js:146630:10)\n    at Object.throwErrByPath (http://www.automationteststore.com/__cypress/runner/cypress_runner.js:146593:11)\n    at onPageLoadErr (http://www.automationteststore.com/__cypress/runner/cypress_runner.js:134238:24)\n    at HTMLIFrameElement.<anonymous> (http://www.automationteststore.com/__cypress/runner/cypress_runner.js:144852:17)\n    at HTMLIFrameElement.dispatch (http://www.automationteststore.com/__cypress/runner/cypress_runner.js:75274:27)\n    at HTMLIFrameElement.elemData.handle (http://www.automationteststore.com/__cypress/runner/cypress_runner.js:75082:28)",
+                "diff": null
+              },
+              "uuid": "8042b074-89b7-4805-8ec1-a79eca970683",
+              "parentUUID": "2cc2135f-d353-4f0d-99cf-9513c54747a9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8042b074-89b7-4805-8ec1-a79eca970683"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3181,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
